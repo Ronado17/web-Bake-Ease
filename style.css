@@ -1,0 +1,321 @@
+/* RESET */
+*{
+  box-sizing:border-box;
+}
+
+/* BODY */
+body{
+  margin:0;
+  font-family:Poppins, sans-serif;
+  background:#fff;
+  color:#333;
+}
+
+/* HEADING */
+h1,h2{
+  font-family:"Playfair Display", serif;
+}
+
+/* SECTION */
+.section{
+  padding:70px 10%;
+  text-align:center;
+}
+
+.soft-bg{
+  background:#fff5f8;
+}
+
+/* ================= HERO ================= */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  padding:80px 10%;
+  background:linear-gradient(120deg,#e8f4ff,#ffe6ef);
+}
+
+.hero-text{
+  flex:1;
+  max-width:520px;
+}
+
+/* LOGO FIX */
+.logo{
+  width:80px;
+  height:auto;
+  display:block;
+  margin-bottom:16px;
+}
+
+/* HERO TEXT */
+.hero-text h1{
+  font-size:52px;
+  color:#5fa6c9;
+  margin:10px 0;
+}
+
+.hero-text h3{
+  font-weight:400;
+  color:#555;
+  margin-bottom:12px;
+}
+
+.hero-text p{
+  font-size:15px;
+  line-height:1.8;
+  color:#555;
+}
+
+/* HERO IMAGE */
+.hero-img{
+  flex:1;
+  max-width:480px;
+}
+
+.hero-img img{
+  width:100%;
+  height:auto;
+  border-radius:30px;
+  object-fit:cover;
+}
+
+/* ================= BUTTON ================= */
+.btn-primary{
+  background:#e88ab1;
+  color:#fff;
+  padding:14px 26px;
+  border-radius:30px;
+  text-decoration:none;
+  margin-left:10px;
+  display:inline-block;
+}
+
+.btn-outline{
+  border:2px solid #5fa6c9;
+  color:#5fa6c9;
+  padding:14px 26px;
+  border-radius:30px;
+  text-decoration:none;
+  display:inline-block;
+}
+
+/* ================= GRID ================= */
+.menu-grid,.schedule-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+.menu-card,.schedule-card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  cursor:pointer;
+  transition:.3s;
+}
+
+.menu-card:hover,.schedule-card:hover{
+  transform:translateY(-6px);
+}
+
+.menu-card img,.schedule-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+/* ================= MODAL ================= */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.5);
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+.modal-box{
+  background:#fff;
+  width:90%;
+  max-width:600px;
+  max-height:85vh;
+  padding:28px;
+  border-radius:26px;
+  overflow:hidden;
+  animation:modalIn .4s ease;
+  box-shadow:0 20px 50px rgba(0,0,0,.2);
+}
+
+/* ANIMATION */
+@keyframes modalIn{
+  from{
+    opacity:0;
+    transform:translateY(30px) scale(.95);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+/* MODAL CONTENT */
+.modal-content{
+  overflow-y:auto;
+  max-height:55vh;
+  padding-right:6px;
+}
+
+.modal-content h3{
+  color:#e88ab1;
+  font-size:22px;
+  margin-top:0;
+}
+
+.modal-content p{
+  font-size:14.5px;
+  line-height:1.8;
+  color:#444;
+  white-space:pre-line;
+}
+
+/* CLOSE */
+.close{
+  float:right;
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* WA BUTTON */
+.wa-btn{
+  display:block;
+  margin-top:18px;
+  background:#25D366;
+  color:#fff;
+  padding:14px;
+  border-radius:14px;
+  text-align:center;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* ================= FORM ================= */
+.form{
+  max-width:400px;
+  margin:auto;
+}
+
+.form input,.form button{
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  border-radius:12px;
+  border:1px solid #ccc;
+}
+
+.form button{
+  background:#e88ab1;
+  color:#fff;
+  border:none;
+}
+
+/* ================= PAYMENT (FIXED LOGO SIZE) ================= */
+.payment-logo{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:30px;
+  margin:30px 0;
+}
+
+.payment-logo img{
+  width:85px;        /* ukuran logo kecil & rapi */
+  height:auto;
+  object-fit:contain;
+  opacity:.9;
+  transition:.3s ease;
+}
+
+.payment-logo img:hover{
+  transform:scale(1.08);
+  opacity:1;
+}
+
+.payment-note{
+  display:block;
+  margin-top:10px;
+  font-size:13px;
+  color:#666;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:#5fa6c9;          /* baby blue */
+  color:#fff;
+  text-align:center;
+  padding:40px 10% 30px;
+}
+
+/* LOGO FOOTER FIX */
+footer img{
+  width:90px;                  /* KECIL seperti logo payment */
+  max-width:100%;
+  height:auto;
+  display:block;
+  margin:0 auto 12px;
+}
+
+/* FOOTER TEXT */
+footer p{
+  margin:8px 0 6px;
+  font-size:14px;
+  font-weight:500;
+}
+
+footer small{
+  font-size:12px;
+  opacity:.85;
+}
+
+/* ================= RESPONSIVE FOOTER ================= */
+@media (max-width:768px){
+  footer img{
+    width:70px;               /* lebih kecil di HP */
+  }
+
+  footer p{
+    font-size:13px;
+  }
+
+  footer small{
+    font-size:11px;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:768px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .logo{
+    margin:0 auto 16px;
+  }
+
+  .hero-text{
+    max-width:100%;
+  }
+
+  .payment-logo{
+    gap:18px;
+  }
+
+  .payment-logo img{
+    width:65px;
+  }
+}

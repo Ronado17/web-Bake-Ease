@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Bake Ease | Couple Baking Experience</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <img src="images/logo.png" class="logo" alt="Bake Ease">
+    <h1>Bake Ease</h1>
+    <h3>Couple Baking Experience – Create Sweet Moments Together</h3>
+    <p>
+      Bake Ease adalah kelas baking khusus pasangan untuk menciptakan
+      momen romantis sambil belajar membuat dessert lezat bersama pasangan tercinta.
+    </p>
+
+    <div class="hero-btn">
+      <a href="#jadwal" class="btn-primary">Reservasi Kelas</a>
+    </div>
+  </div>
+
+  <div class="hero-img">
+    <img src="images/couple-baking.jpg" alt="Couple Baking">
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="section soft-bg">
+  <h2>Kelas Baking</h2>
+  <p>Klik menu untuk melihat detail kelas</p>
+
+  <div class="menu-grid">
+    <div class="menu-card" onclick="openMenu('Strawberry Crumble Cheese Cake')">
+      <img src="images/strawberry.jpg" alt="Strawberry Crumble Cheese Cake">
+      <h4>Strawberry Crumble Cheese Cake</h4>
+    </div>
+
+    <div class="menu-card" onclick="openMenu('Brownies Cookies')">
+      <img src="images/brownies.jpg" alt="Brownies Cookies">
+      <h4>Brownies Cookies</h4>
+    </div>
+
+    <div class="menu-card" onclick="openMenu('Ichigo Daifuku')">
+      <img src="images/ichigo.jpg" alt="Ichigo Daifuku">
+      <h4>Ichigo Daifuku</h4>
+    </div>
+
+    <div class="menu-card" onclick="openMenu('Italian Cake')">
+      <img src="images/italian.jpg" alt="Italian Cake">
+      <h4>Italian Cake</h4>
+    </div>
+
+    <div class="menu-card" onclick="openMenu('Red Velvet Cake')">
+      <img src="images/redvelvet.jpg" alt="Red Velvet Cake">
+      <h4>Red Velvet Cake</h4>
+    </div>
+
+    <div class="menu-card" onclick="openMenu('Tom N Jerry Cheese Cake')">
+      <img src="images/tomjerry.jpg" alt="Tom N Jerry Cheese Cake">
+      <h4>Tom N Jerry Cheese Cake</h4>
+    </div>
+
+    <div class="menu-card" onclick="openMenu('Tiramisu')">
+      <img src="images/tiramisu.jpg" alt="Tiramisu">
+      <h4>Tiramisu</h4>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL MENU -->
+<div id="menuModal" class="modal">
+  <div class="modal-box">
+    <span class="close" onclick="closeMenu()">×</span>
+    <div id="menuContent"></div>
+    <a id="waButton" class="wa-btn" target="_blank">Reservasi via WhatsApp</a>
+  </div>
+</div>
+
+<!-- RESERVASI -->
+<section class="section" id="reservasi">
+  <h2>Reservasi Kelas</h2>
+  <p>Isi data untuk melanjutkan reservasi</p>
+
+  <form class="form" onsubmit="sendWA(event)">
+    <input type="text" id="nama" placeholder="Nama Lengkap" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="tel" id="hp" placeholder="Nomor WhatsApp" required>
+    <button type="submit">Kirim Reservasi</button>
+  </form>
+</section>
+
+<!-- PAYMENT -->
+<section class="section soft-bg">
+  <h2>Metode Pembayaran</h2>
+  <p>Pembayaran dikonfirmasi melalui WhatsApp</p>
+
+  <div class="payment payment-logo">
+    <img src="images/bca.png" alt="BCA">
+    <img src="images/seabank.png" alt="SeaBank">
+    <img src="images/shopeepay.png" alt="ShopeePay">
+  </div>
+
+  <small class="payment-note">
+    Pembayaran melalui transfer bank atau e-wallet.  
+    Detail pembayaran akan diberikan via WhatsApp setelah reservasi.
+  </small>
+</section>
+
+<!-- SOSMED -->
+<section class="section">
+  <h2>Ikuti Kami</h2>
+  <div class="social">
+    <a href="#">Instagram @bake.ease</a>
+    <a href="#">TikTok @bake.ease</a>
+    <a href="#">WhatsApp</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="images/logo.png">
+  <p>Create Sweet Moments Together</p>
+  <small>© 2026 Bake Ease</small>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
